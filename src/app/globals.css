@@ -25,3 +25,27 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.btn-gra{
+  color: #fff;
+  background: linear-gradient(90deg, #ff4949, #ca41f4, #ff4949, #ca41f4, #ff4949);
+  background-size: 400%;
+}
+ 
+.btn-gra:hover{
+  color: #fff;
+  animation: animate 8s linear infinite;
+}
+ 
+@keyframes animate
+{
+  0%
+  {
+    background-position: 0%;
+  }
+  100%
+  {
+    background-position: 400%;
+  }
+}
+ 
