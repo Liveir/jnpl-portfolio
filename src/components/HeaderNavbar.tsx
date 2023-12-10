@@ -1,13 +1,15 @@
+'use client'
+
 import React from "react";
-import {Button, ButtonGroup, Link} from "@nextui-org/react";
+import { Button, ButtonGroup, Link } from "@nextui-org/react";
 import { GoDownload } from "react-icons/go";
 
-export interface LinkItem {
+interface LinkItem {
   name: string;
   hash: string;
 }
 
-export const links: LinkItem[] = [
+const links: LinkItem[] = [
   { name: "Home", hash: "#home" },
   { name: "About", hash: "#about" },
   { name: "Skills", hash: "#skills" },
@@ -16,7 +18,10 @@ export const links: LinkItem[] = [
 ];
 
 export default function HeaderNavbar() {
-  const visibleLinks = links.filter(link => link.name !== "Home" && link.name !== "About");
+  const visibleLinks = links.filter(
+    (link) => link.name !== "Home" && link.name !== "About"
+  );
+
   return (
     <>
       <ButtonGroup color="default" variant="flat" className="hidden sm:flex">
@@ -27,8 +32,18 @@ export default function HeaderNavbar() {
             </Link>
           </Button>
         ))}
-        <Button className="btn-gra" variant="shadow" endContent={<GoDownload />}>
-          Résumé
+        <Button
+          className="btn-gra"
+          variant="shadow"
+          endContent={<GoDownload />}
+        >
+          <Link
+            href="jnpl-resume.pdf"
+            download="jnpl-resume.pdf"
+            className="text-white text-sm"
+          >
+            Résumé
+          </Link>
         </Button>
       </ButtonGroup>
       <ButtonGroup color="default" variant="flat" className="sm:hidden">
@@ -39,8 +54,18 @@ export default function HeaderNavbar() {
             </Link>
           </Button>
         ))}
-        <Button className="btn-gra" variant="shadow" endContent={<GoDownload />}>
-          Résumé
+        <Button
+          className="btn-gra"
+          variant="shadow"
+          endContent={<GoDownload />}
+        >
+          <Link
+            href="jnpl-resume.pdf"
+            download="jnpl-resume.pdf"
+            className="text-white text-sm"
+          >
+            Résumé
+          </Link>
         </Button>
       </ButtonGroup>
     </>
