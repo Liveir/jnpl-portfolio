@@ -38,8 +38,8 @@ export default function HeaderNavbar() {
           endContent={<GoDownload />}
         >
           <Link
-            href="jnpl-resume.pdf"
-            download="jnpl-resume.pdf"
+            href="resume.pdf"
+            download="resume.pdf"
             className="text-white text-sm"
           >
             Résumé
